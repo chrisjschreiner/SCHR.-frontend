@@ -18,7 +18,7 @@ const Products = ({ cat, filters, sort }) => {
     const getProducts = async () => {
       try {
         const res = await axios.get(
-          cat && `http://localhost:5000/api/products?category=${cat}`
+          cat && `https://schr-api.onrender.com/api/products?category=${cat}`
         );
         setProducts(res.data);
       } catch (err) {}
