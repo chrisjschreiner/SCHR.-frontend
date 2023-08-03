@@ -18,7 +18,11 @@ const Products = ({ cat, filters, sort }) => {
     const getProducts = async () => {
       try {
         const res = await axios.get(
+<<<<<<< HEAD
           cat && `http://localhost:5000/api/products?category=${cat}`
+=======
+          cat && `https://schr-api.onrender.com/api/products?category=${cat}`
+>>>>>>> c82cc3e038a9822c7afd166ca6badf73c89e957d
         );
         setProducts(res.data);
       } catch (err) {}
