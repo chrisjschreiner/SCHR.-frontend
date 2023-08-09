@@ -15,3 +15,11 @@ export const iPadsAndTablets = (props) => {
     }
   `;
 };
+
+export const ordersum = (props) => {
+  return css`
+    @media only screen and (max-width: 768px) {
+      ${props}
+    }
+  `;
+};
