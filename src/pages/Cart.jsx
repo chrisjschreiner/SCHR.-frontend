@@ -5,7 +5,7 @@ import styled from "styled-components/macro";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { mobile } from "../responsive";
+import { iPadsAndTablets, mobile, ordersum } from "../responsive";
 import StripeCheckout from "react-stripe-checkout";
 import { useEffect, useState } from "react";
 import { userRequest } from "../requestMethods";
@@ -24,7 +24,7 @@ const Wrapper = styled.div`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
-  ${mobile({ flexDirection: "column" })}
+  ${ordersum({ flexDirection: "column" })}
 `;
 
 const Info = styled.div`
@@ -103,7 +103,7 @@ const Summary = styled.div`
   border: 0.5px solid lightgray;
   border-radius: 10px;
   padding: 20px;
-  height: 44vh;
+  ${iPadsAndTablets({ marginTop: "3rem" })}
 `;
 
 const SummaryTitle = styled.h1`
@@ -309,7 +309,7 @@ const Cart = () => {
           )}
         </Bottom>
       </Wrapper>
-      {areProducts && <Footer />}
+      {/* {areProducts && <Footer />} */}
     </Container>
   );
 };
